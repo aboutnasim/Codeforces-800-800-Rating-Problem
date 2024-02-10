@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define mem(a,b) memset(a,b,sizeof(a))
+#define sqr(a) (a*a)
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+
+
+
+
+
+int main()
+{
+    optimize();
+
+    int n, sum=0;
+    cin>>n;
+    vector<string> v;
+
+    for(int i=0; i<n; i++)
+    {
+        string t;
+        cin>>t;
+        v.push_back(t);
+    }
+
+    for(auto u:v)
+    {
+        if(u=="Icosahedron")
+        {
+            sum+=20;
+        }
+        else if(u=="Dodecahedron")
+        {
+            sum+=12;
+        }
+        else if(u=="Octahedron")
+        {
+            sum+=8;
+        }
+        else if(u=="Cube")
+        {
+            sum+=6;
+        }
+        else
+        {
+            sum+=4;
+        }
+    }
+    cout<<sum<<endl;
+
+    return 0;
+}
