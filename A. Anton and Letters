@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define mem(a,b) memset(a,b,sizeof(a))
+#define sqr(a) (a*a)
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+
+
+
+
+
+int main()
+{
+    optimize();
+    vector<string> v;
+    string s;
+    getline(cin,s);
+    //cin.ignore();
+
+    for(int i=0; i<s.size(); i++)
+    {
+        if(s[i]>='a' && s[i]<='z')
+        {
+            string c;
+            c+=s[i];
+            v.push_back(c);
+        }
+    }
+
+    sort(v.begin(), v.end());
+    int sz= unique(v.begin(),v.end())-v.begin();
+    cout<<sz<<endl;
+    return 0;
+}
