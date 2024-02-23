@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define mem(a,b) memset(a,b,sizeof(a))
+#define sqr(a) (a*a)
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+
+
+
+
+
+int main()
+{
+    optimize();
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        vector<int> v;
+        long long sum=0;
+        string k;
+        cin>>k;
+        for(int i=0; i<k.size(); i++)
+        {
+            if(k[i]>='0' && k[i]<='9')
+            {
+                int z= k[i]-'0';
+                v.push_back(z);
+            }
+        }
+
+        for(auto u:v)
+        {
+            sum+=u;
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
