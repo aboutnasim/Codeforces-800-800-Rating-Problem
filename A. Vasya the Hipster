@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define mem(a,b) memset(a,b,sizeof(a))
+#define sqr(a) (a*a)
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+
+
+
+
+
+int main()
+{
+    optimize();
+    int r,b;
+    int cnt=0, frq=0;
+    cin>>r>>b;
+
+    while(r>0 && b>0)
+    {
+        cnt++;
+        r--;
+        b--;
+    }
+
+
+    if(b==0)
+    {
+        while(r>=2)
+        {
+            frq++;
+            r=r-2;
+        }
+    }
+    else if(r==0)
+    {
+        while(b>=2)
+        {
+            frq++;
+            b=b-2;
+        }
+    }
+    cout<<cnt<<" "<<frq<<endl;
+    return 0;
+}
